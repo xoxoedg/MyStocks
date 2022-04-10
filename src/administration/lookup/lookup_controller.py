@@ -15,7 +15,6 @@ def get_all_lookups():
 @administration_page.route("/lookups/anlegen", methods=["POST"])
 def post_neuen_lookup():
     data = request.get_json()
-    print(data)
     look_up_service = LookupService()
-    look_up_service.add_aktie_lookup(data["app_name"], data["api_name"])
+    look_up_service.add_aktie_lookup(data)
     return jsonify({"msg": "successful"})
