@@ -18,3 +18,21 @@ def post_neuen_lookup():
     look_up_service = LookupService()
     look_up_service.add_aktie_lookup(data)
     return jsonify({"msg": "successful"})
+
+
+@administration_page.route("/lookups/bearbeiten", methods=["PUT"])
+def bearbeite_lookup_eintrag():
+    data = request.get_json()
+    look_up_service = LookupService()
+    look_up_service.bearbeite_lookup(data)
+    return jsonify("Sucssfull")
+
+
+@administration_page.route("/lookups/löschen/<aktie>", methods=["DELETE"])
+def loesche_lookup_eintrag(aktie):
+    look_up_service = LookupService()
+    look_up_service.loesche_lookup(aktie)
+    return jsonify("Sucssfull")
+
+
+
