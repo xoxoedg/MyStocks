@@ -1,4 +1,7 @@
-from src import app
+from src import app, db
 
 if __name__ == "__main__":
-    app.run()
+    db.create_all()
+    db.session.commit()
+
+    app.run(debug=True)
