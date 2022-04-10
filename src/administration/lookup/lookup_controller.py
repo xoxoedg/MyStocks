@@ -9,7 +9,7 @@ administration_page = Blueprint("administration", __name__, url_prefix='/adminis
 @administration_page.route("/lookups", methods=["GET"])
 def get_all_lookups():
     look_up_service = LookupService()
-    return "Hello"
+    return jsonify(look_up_service.get_alle_aktien())
 
 
 @administration_page.route("/lookups/anlegen", methods=["POST"])
