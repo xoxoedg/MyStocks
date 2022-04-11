@@ -5,7 +5,7 @@ from src.administration.lookup.lookup_adapter import LookupAdapter
 
 class LookupService:
 
-    def get_alle_aktien(self):
+    def get_alle_lookup(self):
         alle_aktien_lookups = LookUp.query.all()
         return list(map(lambda lookup: LookupAdapter.to_dto(lookup).serialize(), alle_aktien_lookups))
 
