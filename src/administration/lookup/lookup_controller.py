@@ -28,7 +28,7 @@ def bearbeite_lookup_eintrag():
     return jsonify("Sucssfull")
 
 
-@administration_page.route("/lookups/löschen/<aktie>", methods=["DELETE"])
+@administration_page.route("/lookups/loeschen/<aktie>", methods=["DELETE"])
 def loesche_lookup_eintrag(aktie):
     look_up_service = LookupService()
     look_up_service.loesche_lookup(aktie)

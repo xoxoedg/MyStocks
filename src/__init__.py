@@ -5,7 +5,7 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"*": {"origins": "*"}})
 
 app.config.from_object(os.environ['PROFILE'] if os.environ.get('PROFILE') is not None else {})
 app.config['SQLALCHEMY_ECHO'] = True
