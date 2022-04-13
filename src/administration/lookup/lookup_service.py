@@ -8,7 +8,7 @@ class LookupService:
     def get_alle_lookup(self):
         alle_aktien_lookups = LookUp.query.all()
         if testing:
-            raise ValueError
+            raise NameError
         result = list(map(lambda lookup: LookupAdapter.to_dto(lookup).serialize(), alle_aktien_lookups))
         return result
 
