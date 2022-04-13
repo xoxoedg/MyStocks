@@ -35,4 +35,4 @@ we count the number of calls per month and stop hitting the API once we are clos
 
 ### Database Schema
 The diagram below illustrates the schema of our stocks database:    
-![img.png](docs/schema.png)
+![img.png](docs/db-schema-v1.png)
