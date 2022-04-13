@@ -1,5 +1,7 @@
 # MyStocks
 
+## Business Domain
+
 ### Core Domain
 This project serves as backend for monitoring personal stocks. In order to do so
 it requests information from the API of yahoo available at    
@@ -36,3 +38,24 @@ we count the number of calls per month and stop hitting the API once we are clos
 ### Database Schema
 The diagram below illustrates the schema of our stocks database:    
 ![img.png](docs/db-schema-v1.png)
+
+## Local Setup
+
+### Setting up dependencies
+Create a virtual environment either via command line or if using IntelliJ in terms of a new project SDK
+and configure to use it in Project Structure. Using IntelliJ you can now open requirements.txt and simply
+follow the suggestion to install the specified dependencies. As the new virtual environment ist configured 
+as project SDK, the corresponding packages will be automatically installed in the right location within the virtual
+environment, i.e. site-packages. Otherwise, using command line you need to activate the virtual environment explicitly
+and then install the dependencies via pip thereby passing the requirements.txt file as a parameter to the 
+pip install command.
+
+### Running the project
+In order to run the project locally, you need to install docker and start the postgres database
+from the root directory of the project using ```docker-compose up```    
+Further, there are two profiles - dev and local - to run the application (note that the former uses mock
+data instead of actually requesting information from yh-finance). They are configured in terms of config.py.
+The profiles can be activated by configuring corresponding runners. The configuration for e.g. the dev profile
+in IntelliJ looks as follows:
+![img.png](docs/run-config.png)
+
