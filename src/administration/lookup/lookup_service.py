@@ -9,7 +9,7 @@ class LookupService:
     def get_alle_lookup(self):
         alle_aktien_lookups = LookUp.query.all()
         if testing:
-            raise StocksValueException("This is an invalid value!")
+            raise StocksValueException("We are in testing mode!")
         result = list(map(lambda lookup: LookupAdapter.to_dto(lookup).serialize(), alle_aktien_lookups))
         return result
 
