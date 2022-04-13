@@ -1,6 +1,7 @@
 from src import db, testing
 from src.administration.lookup.lookup import LookUp
 from src.administration.lookup.lookup_adapter import LookupAdapter
+from src.common.exception_handling import StocksValueException
 
 
 class LookupService:
@@ -8,7 +9,7 @@ class LookupService:
     def get_alle_lookup(self):
         alle_aktien_lookups = LookUp.query.all()
         if testing:
-            raise NameError
+            raise StocksValueException("This is an invalid value!")
         result = list(map(lambda lookup: LookupAdapter.to_dto(lookup).serialize(), alle_aktien_lookups))
         return result
 
