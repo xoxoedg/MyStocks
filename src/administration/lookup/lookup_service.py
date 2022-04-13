@@ -1,4 +1,4 @@
-from src import db
+from src import db, testing
 from src.administration.lookup.lookup import LookUp
 from src.administration.lookup.lookup_adapter import LookupAdapter
 
@@ -7,7 +7,10 @@ class LookupService:
 
     def get_alle_lookup(self):
         alle_aktien_lookups = LookUp.query.all()
-        return list(map(lambda lookup: LookupAdapter.to_dto(lookup).serialize(), alle_aktien_lookups))
+        if testing:
+            raise ValueError
+        result = list(map(lambda lookup: LookupAdapter.to_dto(lookup).serialize(), alle_aktien_lookups))
+        return result
 
     def add_aktie_lookup(self, data):
         aktie_eintrag = LookUp(app_name=data["app_name"], api_name=data["api_name"])

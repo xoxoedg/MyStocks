@@ -12,7 +12,13 @@ administration_page = Blueprint("administration", __name__, url_prefix='/adminis
 @administration_page.route("/lookups", methods=["GET"])
 def get_all_lookups():
     look_up_service = LookupService()
-    return app.response_class(response=json.dumps(look_up_service.get_alle_lookup()),
+    try:
+        lookup = look_up_service.get_alle_lookup()
+    except ValueError as e:
+        return app.response_class(response=json.dumps({"msg": "THIS IS AN ERROR"}),
+                                  status=401,
+                                  mimetype='application/json')
+    return app.response_class(response=json.dumps(lookup),
                               status=200,
                               mimetype='application/json')
 
