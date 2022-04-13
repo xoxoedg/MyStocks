@@ -2,7 +2,7 @@ from flask import Blueprint, jsonify
 from flask import request
 
 from src.administration.lookup.lookup_service import LookupService
-from src.common.exception_handling import handle_function_call
+from src.common.response_customizer import respond
 
 administration_page = Blueprint("administration", __name__, url_prefix='/administration')
 
@@ -10,7 +10,7 @@ administration_page = Blueprint("administration", __name__, url_prefix='/adminis
 @administration_page.route("/lookups", methods=["GET"])
 def get_all_lookups():
     look_up_service = LookupService()
-    return handle_function_call(look_up_service.get_alle_lookup)
+    return respond(look_up_service.get_alle_lookup)
 
 
 @administration_page.route("/lookups/anlegen", methods=["POST"])
