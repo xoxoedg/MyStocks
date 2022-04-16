@@ -7,10 +7,17 @@ from src.common.response_customizer import respond
 administration_page = Blueprint("administration", __name__, url_prefix='/administration')
 
 
-@administration_page.route("/lookups", methods=["GET"])
+@administration_page.route("/lookups", methods=["GET"] )
 def get_all_lookups():
     look_up_service = LookupService()
     return respond(look_up_service.get_alle_lookup)
+
+
+@administration_page.route("/lookups/<aktien_name>", methods=["GET"])
+def get_specific_lookups(aktien_name):
+    look_up_service = LookupService()
+    print(look_up_service.get_specific_lookup(aktien_name))
+    return jsonify(look_up_service.get_specific_lookup(aktien_name))
 
 
 @administration_page.route("/lookups/anlegen", methods=["POST"])

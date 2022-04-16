@@ -27,6 +27,12 @@ class LookupService:
 
     def loesche_lookup(self, aktie):
         lookup_eintrag = LookUp.query.get(aktie)
-        print(lookup_eintrag)
         db.session.delete(lookup_eintrag)
         db.session.commit()
+
+    def get_specific_lookup(self, name):
+        specific_aktie = LookUp.query.filter_by(app_name=name).first()
+        print(specific_aktie)
+        return LookupAdapter.to_dto(specific_aktie).serialize()
+
+
