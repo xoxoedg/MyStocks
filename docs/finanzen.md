@@ -14,7 +14,8 @@ Kaufentscheidungen zu vereinfachen und auf Basis eines soliden theoretischen Fun
 ### Grundlegende Vokabeln
 
 Um die Fundamentalanalyse in ihren Grundlagen zu verstehen, benötigen wir einige Vokabeln (die zudem einen Teil der ```ubiquituous 
-language``` der Fachdomäne dieses App widerspiegeln) 
+language``` der Fachdomäne dieses App widerspiegeln). Wenn nicht explizit anders spezifiziert beschreiben die Kennzahlen im Rahmen der 
+App immer Wert bzgl. eines Jahres.
 
 Bezeichnung in der App | Deutscher Begriff        | Englischer Begriff              | Bedeutung
 ---------------------- | ------------------------ | ------------------------------- | ---------
@@ -22,3 +23,7 @@ KGV                    | Kurs-Gewinn-Verhältnis   | Price-per-Earnings Ration (
 KBV                    | Kurs-Buchwert-Verhältnis | Price-per-Booking Ration (PBR)  | Kurs einer Aktie im Vergleich zum Eigenkapital einer Aktie (Value entspricht KBV < 1)
 Eigenkapital           | Eigenkapital             | Equity                          | Summe aus Kapital durch verkaufte Aktien + Sachwerte des Unternehmens (Assets) + anderweitiges nicht auf Verschuldung basierendes Kapital
 Fremdkapital           | Fremdkapital             | Debts                           | Schulden aus Krediten und herausgegebenen Unternehmensanleihen
+Free Cash Flow         | Freier Cash Flow         | Free Cash Flow                  | Purer Gewinn eines Unternehmens in einem Jahr - Reinvestitionen in Sachwerte; entspricht dem puren Wert der in einem Jahr erwirtschaftet wurde und im Prinzip an die Aktionäre ausgeschüttet werden kann
+Eigenkapitalquote      | Eigenkapitalquote        | -                               | Eigenkapital geteilt durch Gesamtvermögen (Teil des Vermögens, der nicht über Schulden abgebildet wird)
+Eigenkapitalrendite    | Eigenkapitalrendite      | Return on Equity                | Nettogewinn geteilt durch Eigenkapital
+Aktien im Umlauf       | Aktien im Umlauf         | Shares Outstanding              | Aktien, die von Aktioären gehalten werden (also Aktien, die aktuell an Aktionäre verkauft sind)
