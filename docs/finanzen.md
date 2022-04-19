@@ -24,8 +24,8 @@ KBV                    | Kurs-Buchwert-Verhältnis | Price-per-Booking Ration (P
 Eigenkapital           | Eigenkapital             | Equity                          | Summe aus Kapital durch verkaufte Aktien + Sachwerte des Unternehmens (Assets) + anderweitiges nicht auf Verschuldung basierendes Kapital
 Fremdkapital           | Fremdkapital             | Debts                           | Schulden aus Krediten und herausgegebenen Unternehmensanleihen
 Free Cash Flow         | Freier Cash Flow         | Free Cash Flow                  | Purer Gewinn eines Unternehmens in einem Jahr - Reinvestitionen in Sachwerte; entspricht dem puren Wert der in einem Jahr erwirtschaftet wurde und im Prinzip an die Aktionäre ausgeschüttet werden kann
-Eigenkapitalquote      | Eigenkapitalquote        | -                               | Eigenkapital geteilt durch Gesamtvermögen (Teil des Vermögens, der nicht über Schulden abgebildet wird)
-Eigenkapitalrendite    | Eigenkapitalrendite      | Return on Equity                | Nettogewinn geteilt durch Eigenkapital
+Eigenkapitalquote      | Eigenkapitalquote        | -                               | Eigenkapital geteilt durch Gesamtvermögen (Teil des Vermögens, der nicht über Schulden abgebildet wird); Eigenkapitalquote >= 40% beschreibt einen sehr guten Wert
+Eigenkapitalrendite    | Eigenkapitalrendite      | Return on Equity                | Nettogewinn geteilt durch Eigenkapital; Wert zwisch 8% und 25% ist sehr gut
 Aktien im Umlauf       | Aktien im Umlauf         | Shares Outstanding              | Aktien, die von Aktioären gehalten werden (also Aktien, die aktuell an Aktionäre verkauft sind)
 
 Für die Implementierung unserer Applikation sind vorerst nicht alle der oben beschriebenen Konzepte relevant. Allerdings sind die genannten Kennzahlen für 
@@ -37,4 +37,7 @@ Hier ist eine kurze Liste mit Links, die als Einstieg helfen können (am Beispie
 - https://www.finanzen.net/bilanz_guv/apple
 - https://www.ariva.de/apple-aktie/bilanz-guv
 - https://www.onvista.de/aktien/fundamental/Apple-Aktie-US0378331005
-- https://www.boerse-online.de/bilanz_guv/apple
+- https://www.boerse-online.de/bilanz_guv/apple  
+
+Typischerweise findet man noch viele weitere Kennzahlen. Die oben beschriebenen sollten aber in einem ersten Schritt ausreichen,
+darin genügen Information enthalten ist, um zu verstehen, ob es dem Unternehmen "gut geht".
