@@ -41,3 +41,18 @@ Hier ist eine kurze Liste mit Links, die als Einstieg helfen können (am Beispie
 
 Typischerweise findet man noch viele weitere Kennzahlen. Die oben beschriebenen sollten aber in einem ersten Schritt ausreichen,
 darin genügen Information enthalten ist, um zu verstehen, ob es dem Unternehmen "gut geht".
+
+### Berechnung des Unternehmenswertes
+
+Obige Kennzahlen helfen dabei einen ersten Eindruck zum Zustand des Unternehmens zu bekommen. Um für sich zu bewerten, ob sich ein Investment
+lohnt kann es außerdem hilfreich sein, eine weitere abgeleitete Größe, den Wert des Unternehmens, zu bestimmen. Dieser kann
+aufgrund der Komplexität des Marktes nur approximativ bestimmt werden und soll eher als Indikator angesehen werden um zu überprüfen,
+on eine Aktie start unter- oder überbewertet ist. Rigorose Vorhersagen lassen sich also damit nicht treffen.
+Eine Implementierung des Algorithmus findet man im playground.py Skript. Die Annahmen, die hier mit reinfließen sind folgende:    
+- Diskontierungsfaktor 5% (beschreibt Verringerung eines getätigten Investitionsbetrags zum Zeitpunkt t gegenüber der Zukunft z.B. durch Wachstum der Weltwirtschaft etc.)
+- Verwendung eines gemittelten Cashflows der letzten N Jahre (um zeitlich lokale Schwankungen wegzumittels)
+- Annahme, dass nach 10 Jahren kein freier Gewinn mehr generiert wird (passive Schätzung)
+- Minderung des durchschnittlichen Wachstums um Faktor 2/3 (passive Schätzung)
+
+Wir sehen also, dass wir bei der Abbildung des Algorithmus zur Sicherheit einige Passivitätsfaktoren einbauen. Wenn wir immer noch erkennen, dass
+eine Aktie nach Durchlaufen des Algorithmus zu günstig zu sein scheint, so können wir uns also ziemlich sicher sein, dass es sie auch ist.
