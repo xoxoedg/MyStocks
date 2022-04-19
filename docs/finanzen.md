@@ -16,7 +16,9 @@ Kaufentscheidungen zu vereinfachen und auf Basis eines soliden theoretischen Fun
 Um die Fundamentalanalyse in ihren Grundlagen zu verstehen, benötigen wir einige Vokabeln (die zudem einen Teil der ```ubiquituous 
 language``` der Fachdomäne dieses App widerspiegeln) 
 
-Bezeichnung in der App | Deutscher Begriff | Englischer Begriff | Bedeutung
----------------------- | ----------------- | ------------------ | ---------
-KGV      | Kurs-Gewinn-Verhältnis   | Price-per-Share | Kurs einer Aktie im Vergleich zum Gewinn; KGV < 15 indikativ für Value Unternehmen
-Inhalt   | Inhalt   | Inhalt
+Bezeichnung in der App | Deutscher Begriff        | Englischer Begriff              | Bedeutung
+---------------------- | ------------------------ | ------------------------------- | ---------
+KGV                    | Kurs-Gewinn-Verhältnis   | Price-per-Earnings Ration (PER) | Kurs einer Aktie im Vergleich zum Gewinn; KGV < 15 indikativ für Value Unternehmen
+KBV                    | Kurs-Buchwert-Verhältnis | Price-per-Booking Ration (PBR)  | Kurs einer Aktie im Vergleich zum Eigenkapital einer Aktie (Value entspricht KBV < 1)
+Eigenkapital           | Eigenkapital             | Equity                          | Summe aus Kapital durch verkaufte Aktien + Sachwerte des Unternehmens (Assets) + anderweitiges nicht auf Verschuldung basierendes Kapital
+Fremdkapital           | Fremdkapital             | Debts                           | Schulden aus Krediten und herausgegebenen Unternehmensanleihen
