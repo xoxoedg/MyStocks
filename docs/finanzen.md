@@ -27,3 +27,14 @@ Free Cash Flow         | Freier Cash Flow         | Free Cash Flow              
 Eigenkapitalquote      | Eigenkapitalquote        | -                               | Eigenkapital geteilt durch Gesamtvermögen (Teil des Vermögens, der nicht über Schulden abgebildet wird)
 Eigenkapitalrendite    | Eigenkapitalrendite      | Return on Equity                | Nettogewinn geteilt durch Eigenkapital
 Aktien im Umlauf       | Aktien im Umlauf         | Shares Outstanding              | Aktien, die von Aktioären gehalten werden (also Aktien, die aktuell an Aktionäre verkauft sind)
+
+Für die Implementierung unserer Applikation sind vorerst nicht alle der oben beschriebenen Konzepte relevant. Allerdings sind die genannten Kennzahlen für 
+weiterführende Analysen sehr hilfreich. Zeigt unsere Anwendung zum Beispiel, dass es sich um eine unterbewertete Aktie handelt, die auch von Analysten empfohlen wird,
+so lohnt es sich vor einem Kauf dennoch zusätzlich einige Unternehmensinformationen zusätzlich explizit zu checken. Dazu gibt es diverse Internetseiten,
+die teilweise direkt oben genannte Infos, oder aber verwandte Kennzahlen bereitstellen, aus denen sich obige Werte berechnen lassen.
+Hier ist eine kurze Liste mit Links, die als Einstieg helfen können (am Beispiel von Apple):    
+- https://finance.yahoo.com/quote/AAPL/cash-flow?p=AAPL
+- https://www.finanzen.net/bilanz_guv/apple
+- https://www.ariva.de/apple-aktie/bilanz-guv
+- https://www.onvista.de/aktien/fundamental/Apple-Aktie-US0378331005
+- https://www.boerse-online.de/bilanz_guv/apple

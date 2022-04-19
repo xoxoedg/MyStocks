@@ -1,5 +1,7 @@
 YH-FINANCE API
 
+Dieses Dokument beschreibt die relevanten Felder, die wir von yahoo-finances verwenden.
+
 https://yh-finance.p.rapidapi.com/stock/v3/get-statistics (Endpunkt)
 https://yh-finance.p.rapidapi.com/stock/v3/get-statistics?symbol=ADS.DE (Query; hier zum Beispiel Adidas)
 
