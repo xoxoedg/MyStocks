@@ -1,4 +1,4 @@
-from config import DevConfig
+from config import DevConfig, ProdConfig
 from src import create_app, db
 
 app = create_app(config_file=DevConfig)

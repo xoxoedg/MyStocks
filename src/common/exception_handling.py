@@ -1,3 +1,6 @@
+from sqlalchemy.exc import SQLAlchemyError
+
+
 class StocksValueException(ValueError):
 
     def __init__(self, msg):
@@ -12,4 +15,8 @@ class StocksNotFoundError(NameError):
         super(StocksNotFoundError, self).__init__()
 
 
+class DatabaseNotLoadedError(SQLAlchemyError):
 
+    def __init__(self, msg):
+        self.msg = msg
+        super(DatabaseNotLoadedError, self).__init__()

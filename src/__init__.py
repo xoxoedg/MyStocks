@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, current_app
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
@@ -12,7 +12,7 @@ def create_app(config_file=None):
     CORS(app, resources={r"*": {"origins": "*"}})
     app.config.from_object(os.environ['PROFILE'] if os.environ.get('PROFILE') is not None else {})
     db.init_app(app)
-
+    app.config['SQLALCHEMY_ECHO'] = True
     global testing
     testing = app.config["TESTING"]
 
@@ -25,3 +25,4 @@ def create_app(config_file=None):
 
 db = SQLAlchemy()
 SQLALCHEMY_TRACK_MODIFICATIONS = True
+
