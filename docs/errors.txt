@@ -1,0 +1,31 @@
+Wir verwenden in unserer App Custom Exceptions (exception_handling.py) und mappen diese in der Http Response auf
+entsprechende Codes (response_customizer).
+
+Dieses Dokument definiert die fachlichen Fehler zusammen mit den entsprechenden Exceptions und Error Codes.
+
+------------------------------------------------------------------------
+- AppName oder ApiName sind beim Anlegen eines neuen LookUp Objekts leer
+- MyStocksValueException(ValueError)
+- Status Code 400
+
+------------------------------------------------------------------------
+- Kein LookUp Objekt kann zum angefragten AppName gefunden werden
+- MyStocksNameException(NameError)
+- Status Code 404
+
+------------------------------------------------------------------------
+- Datenbank ist nicht erreichbar (je nach Usecase kann hier potentiell der Fehler gefangen werden und die Daten statt
+  dessen über yh-finances aktualisiert werden; für LookUps zum Beispiel muss allerdings ein Fehler geworfen werden,
+  da es hier keinen entsprechenden Fallback gibt)
+- MyStocksDataAccessException(SQLAlchemyError)
+- Status Code 503
+
+------------------------------------------------------------------------
+- yh-finances ist nicht erreichbar
+- MyStocksDataAccessException(ConnectionError)
+- Status Code 503
+
+------------------------------------------------------------------------
+- Berechnung des Wertes einer Unternehmens nicht möglich, weil zum Bsp. keine / nicht ausreichen fcfs gepflegt sind
+- MyStocksCompanyValueException(ValueError)
+- Status Code 412
