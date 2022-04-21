@@ -11,7 +11,7 @@ def compute_company_avg_growth(fcf_list, caution_factor=0.66):
     return (product_of_growth_rates ** (1. / (len(fcf_list) - 1)) - 1) * caution_factor
 
 
-def compute_start_value(fcf_list): # use last couple of fcfs
+def compute_start_value(fcf_list):  # use last couple of fcfs
     sum = 0
     for fcf in fcf_list:
         sum += fcf
@@ -32,7 +32,6 @@ def compute_value(avg_fcf, start_value):
 
     return after_ten_years + after_hundred_years
 
-
 # # Apple 2021 value
 # avg_growth = compute_company_avg_growth([50803, 64121, 58896, 73365, 92953])
 #
@@ -52,11 +51,13 @@ def compute_value(avg_fcf, start_value):
 # print(value * 1000000 / 16300000000)
 #
 # print('##########################')
-#
-# # Adidas 2021 value
+
+
+
+# Adidas 2021 value
 # avg_growth = compute_company_avg_growth([1939000, 2111000, 1043000, 2525000])
 #
-# print('Average Growth Apple')
+# print('Average Growth Adidas')
 # print(str(avg_growth) + '%')  # -> 12.2%
 # # conservative estimate: 2/3 * value ~ 8&
 #
@@ -71,20 +72,66 @@ def compute_value(avg_fcf, start_value):
 # print('Fair price of an Adidas Stock')
 # print(value * 1000 / 192100000)
 #
-# Bonduelle 2021 value
-avg_growth = compute_company_avg_growth([28982, 82463, 571, 43751])
+# print('##########################')
 
-print('Average Growth Bonduelle')
+
+
+
+# Bonduelle 2021 value
+# avg_growth = compute_company_avg_growth([43751, 571, 82463, 28982])
+#
+# print('Average Growth Bonduelle')
+# print(str(avg_growth) + '%')  # -> 12.2%
+# # conservative estimate: 2/3 * value ~ 8&
+#
+# start_value = compute_start_value([43751, 571, 82463, 28982])
+# print(start_value)
+# print('Value of Bonduelle')
+# value = compute_value(avg_growth, start_value)
+# print(value)
+#
+# # divide by number of 'shares outstanding' to get the fair price of Apple
+# # check e.g. https://finance.yahoo.com/quote/AAPL/key-statistics/
+# print('Fair price of an Bonduelle Stock')
+# print(value * 1000 / 32630114)
+#
+# print('##########################')
+
+
+# Carl Zeiss Meditec 2021 value
+# avg_growth = compute_company_avg_growth([152451, 172923, 133541, 296562])
+#
+# print('Average Growth Carl Zeiss Meditec')
+# print(str(avg_growth) + '%')  # -> 12.2%
+# # conservative estimate: 2/3 * value ~ 8&
+#
+# start_value = compute_start_value([152451, 172923, 133541, 296562])
+# print(start_value)
+# print('Value of Carl Zeiss Meditec')
+# value = compute_value(avg_growth, start_value)
+# print(value)
+#
+# # divide by number of 'shares outstanding' to get the fair price of Apple
+# # check e.g. https://finance.yahoo.com/quote/AAPL/key-statistics/
+# print('Fair price of an Carl Zeiss Meditec Stock')
+# print(value * 1000 / 89440000)
+
+
+
+# Stratasys 2021 value
+avg_growth = compute_company_avg_growth([7596, -33764, 29356])
+
+print('Average Growth Stratasys')
 print(str(avg_growth) + '%')  # -> 12.2%
 # conservative estimate: 2/3 * value ~ 8&
 
-start_value = compute_start_value([28982, 82463, 571, 43751])
+start_value = compute_start_value([7596, -33764, 29356])
 print(start_value)
-print('Value of Bonduelle')
+print('Value of Stratasys')
 value = compute_value(avg_growth, start_value)
 print(value)
 
 # divide by number of 'shares outstanding' to get the fair price of Apple
 # check e.g. https://finance.yahoo.com/quote/AAPL/key-statistics/
-print('Fair price of an Bonduelle Stock')
-print(value * 1000 / 32630114)
+print('Fair price of an Stratasys Stock')
+print(value * 1000 / 130360000)
