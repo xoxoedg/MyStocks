@@ -1,0 +1,22 @@
+YH-FINANCE API
+
+Dieses Dokument beschreibt die relevanten Felder, die wir von yahoo-finances verwenden.
+
+https://yh-finance.p.rapidapi.com/stock/v3/get-statistics (Endpunkt)
+https://yh-finance.p.rapidapi.com/stock/v3/get-statistics?symbol=ADS.DE (Query; hier zum Beispiel Adidas)
+
+timeSeries.trailingForwardPeRatio (KGV)
+timeSeries.trailingPbRatio (KBV)
+financialData.numberOfAnalystOpinions (Anzahl an Analysten)
+financialData.targetLowPrice, financialData.targetMeanPrice, financialData.targetHighPrice (niedrigste, durchschnittliche und höchste Bewertung)
+financialData.recommendationMean (Durchschnittliche Bewertung auf Skala von 1 (gut kaufen) bis 5 (Verkaufen))
+price.regularMarketPrice (Aktuellen Preis)
+financialData.financialCurrency (Währung)
+calendarEvents.earnings.earningsDate (Quartalszahlen -> könnte sein, dass diese nur gefüllt sind, wenn es nur noch maximal einen Monat ist, bis die Zahlen anstehen)
+
+Value Computation
+
+https://yh-finance.p.rapidapi.com/stock/v2/get-cash-flow
+
+timeSeries.annualFreeCashFlow -> (list of last years free cashflows -> reportedValue.raw -> actual value of free cashflow)
+                              -> (list of last years free cashflows -> asOfDate -> date of the reported free cashflow)

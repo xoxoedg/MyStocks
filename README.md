@@ -13,18 +13,23 @@ returned to the frontend app. Note that in order not to invoke the external API 
 request we save the data in a local database which acts as a cache for subsequent invocations.
 Thus, we only synchronize with yh-finance API in the following cases:  
   - New stocks shall be monitored
-  - Information for a given stock has not been updated for some time (e.g. 3 days)
+  - Information for a given stock has not been updated for some time (e.g. 3 days for ratings, once a year for value computation)
 
-The general concept is illustrated in the following runtime view:    
+The general concept is illustrated in the following runtime view (note that a similar flow of data applies to the computation of a companies value):    
 
 ![img.png](docs/runtime-view.png)
+
+More information concerning the core domain of our app as well as technical aspects of the api we consume can
+be found in the docs folder (in particular in finanzen.md and yh-finance.txt)
     
 ### Usecases
 Next to the core usecase described in the previous chapter, the following features are provided:  
 - administrative task: map displayed stock names to API params (CRUD /mapping)
+- administrative task: show api invocation count
 - administrative task: provide possibility to upload csv of mappings
 - administrative task: database import and export
 - choose which of the stocks (registered in mappings) should be shown and requested (/stocks)
+- computation of a companies values (requires invocation of yh-finances to retrieve free cash flows)
 - frontend: highlight underrated stocks
 - frontend: exclamation mark on stock when quarterlies are close or rating has changed
     
@@ -37,7 +42,7 @@ we count the number of calls per month and stop hitting the API once we are clos
 
 ### Database Schema
 The diagram below illustrates the schema of our stocks database:    
-![img.png](docs/db-schema-v1.png)
+![img.png](docs/db-schema-v2.png)
 
 ## Local Setup
 
