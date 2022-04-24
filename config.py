@@ -11,3 +11,9 @@ class ProdConfig:
 class DevConfig:
     TESTING = True
     SQLALCHEMY_DATABASE_URI = "postgresql://root:root@localhost:5432/dev"
+
+
+class TestConfig:
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
+

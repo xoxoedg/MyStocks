@@ -1,4 +1,4 @@
-insert into (app_name, api_name) values (
+insert into (id, app_name, api_name) values (
     'thomas', 't'
 )
 insert into (app_name, api_name)
