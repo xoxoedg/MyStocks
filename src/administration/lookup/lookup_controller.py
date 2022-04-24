@@ -12,9 +12,7 @@ look_up_service = LookupService()
 
 @administration_page.route("/lookups", methods=["GET"])
 def get_all_lookups():
-    # respond(look_up_service.get_alle_lookup)
-    return "Hello"
-
+    return respond(look_up_service.get_alle_lookup)
 
 @administration_page.route("/lookups/<aktien_name>", methods=["GET"])
 def get_specific_lookups(aktien_name):
