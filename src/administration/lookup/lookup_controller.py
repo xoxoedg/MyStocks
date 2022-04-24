@@ -1,5 +1,6 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint
 from flask import request
+
 from src.administration.lookup.lookup_service import LookupService
 from src.common.response_customizer import respond
 

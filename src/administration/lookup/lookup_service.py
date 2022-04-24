@@ -23,8 +23,8 @@ class LookupService:
 
     @db_exception_handling
     def bearbeite_lookup(self, data):
-        if data["old_app_name"] is not None:
-            lookup_eintrag = LookUp.query.get(data["old_app_name"])
+        if data["id"] is not None:
+            lookup_eintrag = LookUp.query.get(data["id"])
             lookup_eintrag.app_name = data["app_name"]
             lookup_eintrag.api_name = data["api_name"]
             db.session.add(lookup_eintrag)
