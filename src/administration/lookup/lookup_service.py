@@ -1,9 +1,9 @@
-from common.decoraters.decorators import db_exception_handling
-from common.dtos.success_dto import SuccessDto
+from src.common.decoraters.decorators import db_exception_handling
 from src import db
 from src.administration.lookup.lookup import LookUp
 from src.administration.lookup.lookup_adapter import LookupAdapter
-from src.common.exception_handling import StocksValueException, StocksNotFoundError
+from src.common.dtos.success_dto import SuccessDto
+from src.common.exception_handling import StocksNotFoundError
 
 
 class LookupService:
