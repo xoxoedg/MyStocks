@@ -17,8 +17,10 @@ def create_app(config_file=None):
     testing = app.config["TESTING"]
 
     from src.administration.lookup.lookup_controller import administration_page
+    from src.aktien.aktien_controller import aktien
 
     app.register_blueprint(administration_page)
+    app.register_blueprint(aktien)
 
     return app
 
