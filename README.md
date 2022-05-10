@@ -13,7 +13,7 @@ returned to the frontend app. Note that in order not to invoke the external API 
 request we save the data in a local database which acts as a cache for subsequent invocations.
 Thus, we only synchronize with yh-finance API in the following cases:  
   - New stocks shall be monitored
-  - Information for a given stock has not been updated for some time (e.g. 3 days for ratings, once a year for value computation)
+  - Information for a given stock has not been updated for some time (e.g. 3 days for ratings, once a year for value computation and financial data from yearly reports)
 
 The general concept is illustrated in the following runtime view (note that a similar flow of data applies to the computation of a companies value):    
 
@@ -30,14 +30,15 @@ Next to the core usecase described in the previous chapter, the following featur
 - administrative task: database import and export
 - choose which of the stocks (registered in mappings) should be shown and requested (/stocks)
 - computation of a companies values (requires invocation of yh-finances to retrieve free cash flows)
+- retrieval of financial data from annual report
 - frontend: highlight underrated stocks
 - frontend: exclamation mark on stock when quarterlies are close or rating has changed
     
 ### External API
 We request yh-finance to receive up-to-date information regarding our stocks of interest. Since we stick
 to the free plan, we can only fire 500 request a month against said API. We thus only call yh-finance
-if the information for a given entry in the database has not been updated in the last three days. Still, once
-many stocks are shown in our app, we might still hit 500 API calls in a given month. For that purpose
+if the information for a given entry in the database has not been updated in the last three days (for statistics) / in the last year (for financial data). 
+Still, once many stocks are shown in our app, we might still hit 500 API calls in a given month. For that purpose
 we count the number of calls per month and stop hitting the API once we are close to 500.
 
 ### Database Schema
