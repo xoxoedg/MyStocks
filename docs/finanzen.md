@@ -27,6 +27,11 @@ Free Cash Flow         | Freier Cash Flow         | Free Cash Flow              
 Eigenkapitalquote      | Eigenkapitalquote        | -                               | Eigenkapital geteilt durch Gesamtvermögen (Teil des Vermögens, der nicht über Schulden abgebildet wird); Eigenkapitalquote >= 40% beschreibt einen sehr guten Wert
 Eigenkapitalrendite    | Eigenkapitalrendite      | Return on Equity                | Nettogewinn geteilt durch Eigenkapital; Wert zwisch 8% und 25% ist sehr gut
 Aktien im Umlauf       | Aktien im Umlauf         | Shares Outstanding              | Aktien, die von Aktioären gehalten werden (also Aktien, die aktuell an Aktionäre verkauft sind)
+Jahresumsatz           | Jahresumsatz             | Total Revenue                   | Gesamter Umsatz des Unternehmens im betreffenden Jahr
+EBIT                   | EBIT                     | EBIT                            | Gewinn vor Zinsen und Steuern; Wert über 15% wird als gut angesehen
+EBITA                  | EBITA                    | EBITA                           | Gewinn vor Zinsen, Steuern, Abschreibungen (in der Bilanz über mehrere Jahre anzugebende Anteile einer Investition); Wert über 20% wird als gut angesehen
+EBIT-Marge             | EBIT-Marge               | EBIT-Marge                      | EBIT im Verhältnis zum Jahresumsatz
+EBITA-Marge            | EBITA-Marge              | EBITA-Marge                     | EBIT im Verhältnis zum Jahresumsatz
 
 Für die Implementierung unserer Applikation sind vorerst nicht alle der oben beschriebenen Konzepte relevant. Allerdings sind die genannten Kennzahlen für 
 weiterführende Analysen sehr hilfreich. Zeigt unsere Anwendung zum Beispiel, dass es sich um eine unterbewertete Aktie handelt, die auch von Analysten empfohlen wird,
@@ -38,6 +43,7 @@ Hier ist eine kurze Liste mit Links, die als Einstieg helfen können (am Beispie
 - https://www.ariva.de/apple-aktie/bilanz-guv
 - https://www.onvista.de/aktien/fundamental/Apple-Aktie-US0378331005
 - https://www.boerse-online.de/bilanz_guv/apple  
+- https://www.tagesschau.de/wirtschaft/boersenkurse/apple-aktie-865985/
 
 Typischerweise findet man noch viele weitere Kennzahlen. Die oben beschriebenen sollten aber in einem ersten Schritt ausreichen,
 darin genügen Information enthalten ist, um zu verstehen, ob es dem Unternehmen "gut geht".
