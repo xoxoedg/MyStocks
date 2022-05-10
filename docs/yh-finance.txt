@@ -14,9 +14,26 @@ price.regularMarketPrice (Aktuellen Preis)
 financialData.financialCurrency (Währung)
 calendarEvents.earnings.earningsDate (Quartalszahlen -> könnte sein, dass diese nur gefüllt sind, wenn es nur noch maximal einen Monat ist, bis die Zahlen anstehen)
 
-Value Computation
+Wert Extrapolation
 
 https://yh-finance.p.rapidapi.com/stock/v2/get-cash-flow
 
 timeSeries.annualFreeCashFlow -> (list of last years free cashflows -> reportedValue.raw -> actual value of free cashflow)
                               -> (list of last years free cashflows -> asOfDate -> date of the reported free cashflow)
+
+
+Unternehmensanalyse
+
+https://yh-finance.p.rapidapi.com/stock/v2/get-financials
+
+incomeStatementHistory.incomeStatementHistory -> (list of last years income statements as reported in yearly reports -> endDate.fmt -> "2021-09-25")
+                                              -> (list of last years income statements as reported in yearly reports -> x = ebit.raw -> 108949000000)
+                                              -> (list of last years income statements as reported in yearly reports -> y = totalRevenue.raw -> 365817000000)
+Mit diesen Daten kann die EBIT-Marge wie folgt berechnet werden: Ebit-Marge = x / y
+
+https://yh-finance.p.rapidapi.com/stock/v2/get-balance-sheet
+
+balanceSheetHistory.balanceSheetStatements -> (list of last years balance statements as reported in yearly reports -> endDate.fmt -> "2021-09-25")
+                                           -> (list of last years balance statements as reported in yearly reports -> x = totalStockholderEquity.raw -> 63090000000)
+                                           -> (list of last years balance statements as reported in yearly reports -> y = totalAssets.raw -> 365817000000)
+Mit diesen Daten kann die Eigenkapitalquote wie folgt berechnet werden: Eigenkapitalquote = x / y
