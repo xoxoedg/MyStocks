@@ -9,8 +9,11 @@ class AktienService:
     def get_aktien_auswahl(self):
         alle_aktien_lookups = LookUp.query.all()
         result = list(map(lambda lookup: self.to_dto(lookup).serialize(), alle_aktien_lookups))
-        print(str(result))
         return result
+
+    @db_exception_handling
+    def auswahl_bestaetigen(self, data):
+        pass
 
     @staticmethod
     def to_dto(lookup):
