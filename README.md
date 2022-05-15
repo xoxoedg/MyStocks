@@ -52,6 +52,20 @@ api_name (string)      | count (int)                           | datum_naechster
                        | |                                     | aktueller_preis (double)                | 
                        | |                                     | aktiv (boolean)                         | 
 
+Bewertung                                  | Fundamentalanalyse                     |  
+------------------------------------------ | -------------------------------------- |
+id (int)                                   | id (int)                               |
+aktie_id (int)                             | aktie_id (int)                         | 
+kgv (double)                               | fcfs (string)                          |
+kbv (double)                               | datum_guv (date)                       |
+anzahl_bewertungen (int)                   | ebit (double)                          | 
+durchschnittliche_bewertung (double)       | jahresumsatz (double)                  | 
+minimaler_preise (double)                  | datum_bilanz (date)                    |
+maximaler_preis (double)                   | eigenkapital (double)                  | 
+durchschnittlicher_preis (double)          | gesamtvermoegen (double)               |
+datum_letzter_stats_api_aufruf (double)    | datum_letzter_guv_api_aufruf (date)    |
+|                                          | datum_letzter_guv_bilanz_aufruf (date) |
+
 ## Local Setup
 
 ### Setting up dependencies
