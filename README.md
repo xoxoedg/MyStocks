@@ -49,8 +49,8 @@ LookUps                | ApiCounter                            | Aktie          
 id (int)               | id (int)                              | id (int)                                |
 app_name (string)      | anfangsdatum_30_tage_periode (date)   | lookup_id (int)                         |
 api_name (string)      | count (int)                           | datum_naechster_quarterly_report (date) |
-                       | |                                     | aktueller_preis (double)                | 
-                       | |                                     | aktiv (boolean)                         | 
+|                      |                                       | aktueller_preis (double)                | 
+|                      |                                       | aktiv (boolean)                         | 
 
 Bewertung                                  | Fundamentalanalyse                     |  
 ------------------------------------------ | -------------------------------------- |
