@@ -4,4 +4,4 @@ requests==2.27.1
 Flask-SQLAlchemy==2.5.1
 psycopg2==2.9.3
 pytest==7.1.1
-
+SQLAlchemy==1.4.36

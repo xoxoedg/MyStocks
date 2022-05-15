@@ -17,4 +17,4 @@ def aktien_auswahl():
 @aktien.route("", methods=["POST"])
 def auswahl_bestaetigen():
     data = AuswahlBestaetigenRequestDto(request.get_json())
-    return respond(lambda: aktien_service.auswahl_bestaetigen(data))
+    return respond(lambda: aktien_service.auswahl_bestaetigen(data.selected_aktien))

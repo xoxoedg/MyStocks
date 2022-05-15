@@ -1,5 +1,7 @@
+from src import db
 from src.administration.lookup.lookup import LookUp
-from src.aktien.aktien_auswahl_response_dto import AktienAuswahlResponseDto
+from src.aktien.aktie import Aktie
+from src.aktien.aktien_dtos import AktienAuswahlResponseDto
 from src.common.decoraters.decorators import db_exception_handling
 
 
@@ -12,8 +14,11 @@ class AktienService:
         return result
 
     @db_exception_handling
-    def auswahl_bestaetigen(self, data):
-        pass
+    def auswahl_bestaetigen(self, selected_aktien):
+        sample = selected_aktien[0]
+        aktie = Aktie(lookup_id=sample.lookup_id, aktueller_preis=123.21)
+        db.session.add(aktie)
+        db.session.commit()
 
     @staticmethod
     def to_dto(lookup):
