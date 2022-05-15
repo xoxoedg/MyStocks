@@ -42,8 +42,15 @@ Still, once many stocks are shown in our app, we might still hit 500 API calls i
 we count the number of calls per month and stop hitting the API once we are close to 500.
 
 ### Database Schema
-The diagram below illustrates the schema of our stocks database:    
-![img.png](docs/db-schema-v2.png)
+The table below illustrates the schema of our stocks database:  
+
+LookUps                | ApiCounter                            | Aktie                                   |
+---------------------- | ------------------------------------- | --------------------------------------- |
+id (int)               | id (int)                              | id (int)                                |
+app_name (string)      | anfangsdatum_30_tage_periode (date)   | lookup_id (int)                         |
+api_name (string)      | count (int)                           | datum_naechster_quarterly_report (date) |
+                       | |                                     | aktueller_preis (double)                | 
+                       | |                                     | aktiv (boolean)                         | 
 
 ## Local Setup
 
