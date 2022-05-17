@@ -10,7 +10,7 @@ timeSeries.trailingPbRatio (KBV)
 financialData.numberOfAnalystOpinions (Anzahl an Analysten)
 financialData.targetLowPrice, financialData.targetMeanPrice, financialData.targetHighPrice (niedrigste, durchschnittliche und höchste Bewertung)
 financialData.recommendationMean (Durchschnittliche Bewertung auf Skala von 1 (gut kaufen) bis 5 (Verkaufen))
-price.regularMarketPrice (Aktueller Preis)
+price.regularMarketPrice.fmt (Aktueller Preis)
 financialData.financialCurrency (Währung)
 calendarEvents.earnings.earningsDate (Quartalszahlen -> könnte sein, dass diese nur gefüllt sind, wenn es nur noch maximal einen Monat ist, bis die Zahlen anstehen)
 
